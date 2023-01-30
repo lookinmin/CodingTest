@@ -1,9 +1,12 @@
 # 점프 점프, S2, DP
 # https://kau-algorithm.tistory.com/188 참고
+
+
+
 from sys import stdin
 n = int(stdin.readline())
 arr = list(map(int, stdin.readline().split()))
-dp = [n+1] * n
+dp = [n+1] * n      # 초기화
 dp[0] = 0
 
 for i in range(n):
