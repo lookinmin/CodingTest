@@ -1,0 +1,24 @@
+<트리>
+
+이진 트리의 순회
+1. 전위, 중위, 후위 - DFS
+2. 레벨 순회 - BFS
+
+Preorder Traversal
+: 현재 노드 → 왼쪽 노드 → 오른쪽 노드
+
+Inorder Traversal
+: 왼쪽 노드 → 현재 노드 → 오른쪽 노드
+(구현 관점에서 easy)
+
+Postorder Traversal
+: 왼쪽 노드 → 오른쪽 노드 → 현재 노드
+
+Levelorder
+: 레벨 별로
+
+배열
+- 레벨 순회 순으로 배열에 구성
+parent : idx % 2
+left : idx * 2 + 1
+right : idx * 2 + 2
