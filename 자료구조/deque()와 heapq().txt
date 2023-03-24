@@ -15,6 +15,7 @@ q.reverse()			# 반전
 q.rotate(x)			# x만큼 시계방향 회전 ->
 
 # heapq()
+
 min heap 자료구조
 -> 부모 노드의 키 값 <= 자식 노드의 키 값
 원소는 항상 정렬되어 추가 & 삭제, 가장 작은 값이 언제나 인덱스 0
@@ -46,8 +47,18 @@ for num in nums:
 
 while heap:
   print(heapq.heappop(heap)[1])
-
 # [1] 인덱싱을 통해 접근
 
+def heapsort(arr)			-> 힙을 사용해 오름차순 정렬하기
+  h = []
+  res = []
+  for i in arr:
+	heapq.heappush(h, i)
+
+  for i in range(len(h)):
+	res.append(heapq.heappop(h))
+  
+  return res
+# 이를 통하면 a.sort() 는 O(n^2) 인데, 힙 정렬은 O(n*logn)
 
 
