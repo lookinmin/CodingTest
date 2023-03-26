@@ -27,11 +27,11 @@ def dijkstra(s):
         if dist[now] < distance:        # 현재 노드가 이미 처리됬다면
             continue                    # 무시하고 진행
 
-        for i in graph[now]:
-            cost = distance + i[1]
-            if cost < dist[i[0]]:       # 현재 노드를 거쳐가는게 더 짧음
-                dist[i[0]] = cost
-                heapq.heappush(q, (cost, i[0]))
+        for v, w in graph[now]:
+            cost = distance + w
+            if cost < dist[v]:       # 현재 노드를 거쳐가는게 더 짧음
+                dist[v] = cost
+                heapq.heappush(q, (cost, v))
 
 dijkstra(start)
 
