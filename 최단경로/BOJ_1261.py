@@ -1,4 +1,4 @@
-# 알고스팟, G4, 그래프 탐색-bfs
+# 알고스팟, G4, 그래프 탐색-bfs-다익스트라
 
 from sys import stdin
 from collections import deque
