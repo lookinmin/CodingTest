@@ -47,8 +47,8 @@ while flag:
         res += 1
         for j in range(6):
             for i in range(10, -1, -1):
-                for k in range(11, i, -1):
-                    if graph[i][j] != '.' and graph[k][j]== '.':
-                        graph[i][j], graph[k][j] = graph[k][j], graph[i][j]
+                for k in range(11, i, -1):      # i,j보다 한칸 밑에
+                    if graph[i][j] != '.' and graph[k][j]== '.':        #현재 내가 .이 아니고, 한칸 밑이 . 이라면
+                        graph[i][j], graph[k][j] = graph[k][j], graph[i][j]     # 내 값을 한칸 밑으로 내리고 내 값을 .으로
                         break
 print(res)
