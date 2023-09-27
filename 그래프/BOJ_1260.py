@@ -1,4 +1,4 @@
-# DFS & BFS, S2, 그래프 이론
+# DFS & BFS, S2, 그래프
 # 정점 번호가 작은 것 먼저
 
 from sys import stdin

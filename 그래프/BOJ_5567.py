@@ -1,4 +1,4 @@
-# 결혼식, S2, 그래프 이론, 그래프 탐색
+# 결혼식, S2, 그래프, 그래프 탐색
 # BFS
 
 from sys import stdin

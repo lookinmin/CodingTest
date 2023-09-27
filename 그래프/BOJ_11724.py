@@ -1,4 +1,4 @@
-# 연결 요소의 개수, S2, 그래프 이론 - connected component 찾기
+# 연결 요소의 개수, S2, 그래프 - connected component 찾기
 # BFS
 
 from sys import stdin

@@ -1,4 +1,4 @@
-# 섬의 개수, S2, 그래프 이론 - DFS & BFS
+# 섬의 개수, S2, 그래프 - DFS & BFS
 # BFS
 
 from sys import stdin

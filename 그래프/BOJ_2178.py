@@ -1,4 +1,4 @@
-# 미로 탐색, S1, 그래프 이론 - BFS
+# 미로 탐색, S1, 그래프 - BFS
 from sys import stdin
 from collections import deque
 

@@ -1,4 +1,4 @@
-# 바이러스, S3, 그래프 이론 - connected component 수 찾기
+# 바이러스, S3, 그래프 - connected component 수 찾기
 from sys import stdin
 from collections import deque
 

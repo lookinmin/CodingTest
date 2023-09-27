@@ -1,4 +1,4 @@
-# 숫자판 점프, S2, 그래프 이론
+# 숫자판 점프, S2, 그래프
 from sys import stdin
 
 res = []

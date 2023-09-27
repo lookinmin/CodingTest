@@ -1,4 +1,4 @@
-# 유기농 배추, S2, 그래프 이론-탐색
+# 유기농 배추, S2, 그래프-탐색
 # connected component
 
 from sys import stdin
