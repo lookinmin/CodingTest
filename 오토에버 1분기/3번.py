@@ -1,23 +1,23 @@
-from sys import stdin
 from itertools import combinations
+from collections import deque
+import sys
+n = int(sys.stdin.readline().rstrip())
+arr = list(map(int, sys.stdin.readline().rstrip().split()))
+result = []
+result.append(arr[0])
+result.append(arr[1])
+arr.pop(0)
+arr.pop(0)
+q = deque(arr)
 
-n = int(stdin.readline())
-arr = list(map(int, stdin.readline().split()))
-
-res = [arr[0], arr[1]]
-
-if n == 2:
-    print(*arr[0 : 2])
-    exit(0)
-
-tmp = arr[2:]
-
-for num in tmp:
-    if num == 1:
-        res.append(num)
-    else:
+while q:
+    result.append(q.popleft())
+    for i in range(2,len(result)+1):
+        com = list(combinations(result,i))
+        for y in range(len(com)):
+            if sum(com[y]) not in arr:
+                result.pop()
+                break
+    if len(result)==n:
         break
-
-while 1:
-
-
+print(result)
