@@ -1,4 +1,4 @@
-# N과 M
+# N과 M(5)
 from sys import stdin
 n, m = map(int, stdin.readline().split())
 arr = list(map(int, stdin.readline().split()))
