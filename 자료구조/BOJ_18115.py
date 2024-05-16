@@ -17,5 +17,5 @@ for i in range(n):
         res.appendleft(tmp)
     else:
         res.append(cards.pop())
-        
+
 print(*res)
