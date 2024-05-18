@@ -1,18 +1,18 @@
 # 에디터, S2
 from sys import stdin
-from collections import deque
 
-origin = deque(stdin.readline().rstrip())
+origin = list(stdin.readline().rstrip())
 n = int(stdin.readline())
-tmp = deque()
+tmp = []
+
 for _ in range(n):
-    op = list(stdin.readline().split())
+    op = stdin.readline().split()
     if op[0] == 'L':
         if origin:
-            tmp.appendleft(origin.pop())
+            tmp.append(origin.pop())
     elif op[0] == 'D':
         if tmp:
-            origin.append(tmp.popleft())
+            origin.append(tmp.pop())
     elif op[0] == 'B':
         if origin:
             origin.pop()
@@ -21,9 +21,4 @@ for _ in range(n):
         
 res = ''
 
-for w in origin:
-    res += w
-for w in tmp:
-    res += w
-
-print(res)
+print(''.join(origin + tmp[::-1]))
