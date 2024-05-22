@@ -24,5 +24,3 @@ while 1:
         continue
     
 print(res)
-
-# 9 7 6 5 4 3
