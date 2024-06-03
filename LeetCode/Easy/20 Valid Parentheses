@@ -1,0 +1,22 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+
+        brackets = {
+                    '}' : '{',
+                    ')' : '(',
+                    ']' : '['
+                    }
+
+        for w in s:
+            if w in brackets.values():      # 여는 괄호
+                stack.append(w)
+            else:
+                if stack and brackets[w] == stack[-1]:
+                    stack.pop()
+                else:
+                    return False
+        
+        if stack:
+            return False
+        return True
