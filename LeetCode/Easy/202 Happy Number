@@ -1,0 +1,19 @@
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        if n == 1:
+            return True
+
+        visited = set()
+        visited.add(n)
+
+        while 1:
+            num = str(n)
+            n = 0
+            for w in num:
+                n += (int(w)**2)
+            if n in visited:
+                return False
+            elif n == 1:
+                return True
+            else:
+                visited.add(n)
