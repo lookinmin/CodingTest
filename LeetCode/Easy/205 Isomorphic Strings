@@ -1,0 +1,19 @@
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        dic = dict()
+        if len(s) != len(t):
+            return False
+
+        for i in range(len(s)):
+            if s[i] in dic.keys() and dic[s[i]] == t[i]:
+                pass
+            elif s[i] not in dic.keys():
+                dic[s[i]] = t[i]
+            elif s[i] in dic.keys() and dic[s[i]] != t[i]:
+                return False
+        
+        set1 = set(dic.keys())
+        set2 = set(dic.values())
+        if len(set1) != len(set2):
+            return False
+        return True
