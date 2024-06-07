@@ -1,0 +1,12 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        
+        stack = [nums[0]]
+        for num in nums[1:]:
+            if stack[-1] != num:
+                stack.append(num)
+
+        for i in range(len(stack)):
+            nums[i] = stack[i]
+            
+        return len(stack)

@@ -1,0 +1,21 @@
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        if len(nums) == 0:
+            return [-1, -1]
+        if target not in nums:
+            return [-1, -1]
+        
+        res = [0] * 2
+        flag = False
+        for idx in range(len(nums)):
+            if flag == False and nums[idx] == target:
+                res[0] = idx
+                flag = True
+                continue
+            if flag and nums[idx] != target:
+                res[1] = idx - 1
+                break
+        
+        if flag and nums[-1] == target:
+            res[1] = idx
+        return res
