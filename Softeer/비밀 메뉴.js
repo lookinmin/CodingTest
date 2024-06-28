@@ -22,3 +22,27 @@ for(let i = 0; i < lst.length - k + 1;i++){
     }
 }
 console.log("normal")
+
+// ----------------------------------------
+
+var fs = require('fs')
+var input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
+var [n, m, k] = input[0].split(' ').map(Number)
+key = new Array();
+key = input[1].split(' ').map(Number)
+lst = new Array();
+lst = input[2].split(' ').map(Number)
+
+if(lst.length < key.length){
+    console.log("normal")
+    process.exit();
+}
+
+keyStr = JSON.stringify(key).slice(1, -1);
+lstStr = JSON.stringify(lst).slice(1, -1);
+flag = lstStr.includes(keyStr);
+if(flag){
+    console.log('secret');
+} else {
+    console.log('normal');
+}
