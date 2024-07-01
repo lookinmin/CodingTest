@@ -13,3 +13,4 @@ const solve = (arr) => {
 }
 
 console.log(solve([1, 3, 5, 9, 2, 4, 10, 3, 5]));
+

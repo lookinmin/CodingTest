@@ -21,3 +21,8 @@ for(let i = 0; i < 10; i++){
 
 var filteredArr = arr.filter(([x, y]) => y % 2 === 0);
 console.log(filteredArr)
+
+// 교집합
+var res = arr1.filter(x => arr2.includes(x));
+// 차집합
+var res = arr1.filter(x => !arr2.includes(x));
