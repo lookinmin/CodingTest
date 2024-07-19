@@ -9,15 +9,13 @@ var solve = function(board) {
     var dy = [0, 0, -1, 1];
 
     const dfs = (x, y) => {
-        if(x < 0 || y < 0 || x >= n || y >= m || board[x][y] === 'X' || board[x][y] === 'W'){
-            return
-        }
         board[x][y] = 'W';
-
         for(let i = 0; i < 4; i++){
             let nx = x + dx[i];
             let ny = y + dy[i];
-            dfs(nx, ny);
+            if(0<=nx && nx < n && 0<=ny && ny < m && board[nx][ny] === 'O'){
+                dfs(nx, ny);
+            }
         }
         return
     }
