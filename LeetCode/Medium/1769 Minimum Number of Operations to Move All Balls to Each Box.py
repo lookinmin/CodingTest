@@ -3,7 +3,6 @@ class Solution:
         n = len(boxes)
         res = [0] * n
 
-
         leftCount, leftCost, rightCount, rightCost = 0, 0, 0, 0
 
         for i in range(1, n):   # 왼쪽으로 부터 오른쪽 순회
