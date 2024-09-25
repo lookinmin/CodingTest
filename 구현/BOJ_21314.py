@@ -26,15 +26,11 @@ for w in minkum:
             cnt = 0
 
 if cnt > 0:
-    if minkum[-1] == 'K':
-        maxtmp = 5 * (10**(cnt))
-        maxValue += str(maxtmp)
-    else:
-        maxtmp = '1' * cnt
-        mintmp = 10**(cnt - 1)
+    maxtmp = '1' * cnt
+    mintmp = 10**(cnt - 1)
 
-        maxValue += str(maxtmp)
-        minValue += str(mintmp)
+    maxValue += str(maxtmp)
+    minValue += str(mintmp)
 
 print(maxValue)
 print(minValue)
