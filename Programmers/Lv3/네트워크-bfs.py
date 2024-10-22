@@ -36,3 +36,40 @@ def solution(n, computers):
 
 
 print(solution(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
+
+# ----------------------------------------
+
+
+from collections import deque
+
+def solution(n, computers):
+    graph = [set() for _ in range(n)]
+    visited = [0] * n
+    
+    for i in range(n):
+        for j in range(n):
+            if computers[i][j] == 1 and i != j:
+                graph[i].add(j)
+                graph[j].add(i)
+    
+    def bfs(node):
+        q = deque()
+        visited[node] = 1
+        q.append(node)
+        
+        while q:
+            v = q.popleft()
+            
+            for adj in graph[v]:
+                if not visited[adj]:
+                    visited[adj] = 1
+                    q.append(adj)
+        return
+    
+    res = 0
+    for num in range(n):
+        if not visited[num]:
+            res+=1
+            bfs(num)
+    
+    return res

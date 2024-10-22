@@ -16,4 +16,19 @@ def solution(routes):
 
     return answer
 
-print(solution([[-20,-15], [-14,-5], [-18,-13], [-5,-3]]))
+# --------------------------
+
+def solution(routes):
+    routes.sort(key = lambda x : x[1])    
+    cnt = 0
+    last_pos = -30001
+    
+    for route in routes:
+        s, e = route
+        
+        if last_pos < s:
+            cnt+=1
+            last_pos = e
+    
+    return cnt
+    
